@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murat Seçgin - Homework-2</title>
+    <link rel="stylesheet" href="../Homework-2-26-Ocak/normalize.css">
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
+    <style>
+        .container {
+            max-width: 1920px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .left ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .left ul li {
+            padding-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+            color: #f8be36;
+        }
+
+        #maclarenlogo {
+            width: 200px;
+            height: 35px;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .right a img {
+            width: 35px;
+            height: 35px;
+            padding-left: 10px;
+        }
+
+        header {
+            background-color: #025922;
+        }
+
+        .header-content {
+            height: 400px;
+            padding-left: 10%;
+            padding-right: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leftbanner {
+            width: 70%;
+        }
+
+        /*yukarıdan aşağı sıralanan right bannerın aralarını aç yukarı aşağı yapıştır.*/
+        .rightbanner {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .banner2 {
+            width: 100%;
+            height: 150px;
+            background-color: #f8be36;
+            font-size: xx-large;
+        }
+
+        .banner2 p {
+            text-align: center;
+        }
+
+        .banner3 {
+            width: 100%;
+            height: 150px;
+            background-color: #f8be36;
+            font-size: xx-large;
+        }
+
+        .banner3 p {
+            text-align: center;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .boxmenu {
+            background-color: #f8be36;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .choice {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .boxchoice {
+            border-style: solid;
+            border-color: #f8be36;
+            border-radius: 5px;
+            height: 120px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .boxchoice h6 {
+            font-size: medium;
+        }
+
+        .menuicon {
+            height: 40px;
+        }
+
+        .middlebanner {
+            background-color: white;
+            border-style: solid;
+            border-color: #f8be36;
+            border-radius: 5px;
+            height: 400px;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .middlebanner div img {
+            height: 370px;
+        }
+
+        .banner4 {
+            display: flex;
+            align-items: center;
+        }
+
+        .banner4text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .learnmore {
+            border-style: none;
+            font-size: medium;
+            height: 30px;
+            width: 100px;
+            background-color: #f8be36;
+        }
+
+        .linebox {
+            height: 50px;
+        }
+
+        .line {
+            display: flex;
+            align-items: center;
+        }
+
+        .hrleft {
+            width: 420px;
+            height: 7px;
+            background: linear-gradient(to right, #ffffff00, #f8be36);
+            border: none;
+        }
+
+        .hrright {
+            width: 420px;
+            height: 7px;
+            background: linear-gradient(to left, #ffffff00, #f8be36);
+            border: none;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 20px;
+            row-gap: 20px;
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+
+        .boximg {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boximg img {
+            height: 100px;
+            width: 130px;
+        }
+
+        /* Small devices (portrait tablets and large phones) */
+        @media only screen and (max-width: 992px) {
+            .container {
+                max-width: 900px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .left ul li {
+                padding-left: 10px;
+            }
+
+            a {
+                font-size: 20px;
+            }
+
+            .right a img {
+                width: 30px;
+                height: 30px;
+                padding-left: 10px;
+            }
+
+            .header-content {
+                height: 250px;
+            }
+
+            #banner1 {
+                height: 200px;
+            }
+
+            .banner2 {
+                width: 100%;
+                height: 90px;
+                background-color: #f8be36;
+                font-size: large;
+            }
+
+            .banner3 {
+                width: 100%;
+                height: 90px;
+                background-color: #f8be36;
+                font-size: large;
+            }
+
+            .menu {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 15px;
+            }
+
+            .choice {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 20px;
+                row-gap: 15px;
+            }
+
+            .middlebanner div img {
+                height: 300px;
+            }
+
+            .hrleft {
+                width: 220px;
+                height: 7px;
+                background: linear-gradient(to right, #ffffff00, #f8be36);
+                border: none;
+            }
+
+            .hrright {
+                width: 220px;
+                height: 7px;
+                background: linear-gradient(to left, #ffffff00, #f8be36);
+                border: none;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+        }
+
+        /* Extra small devices (phones) */
+        @media only screen and (max-width: 600px) {
+            .container {
+                max-width: 500px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            #maclarenlogo {
+                width: 100px;
+                height: 18px;
+            }
+
+            a {
+                font-size: 15px;
+            }
+
+            .right a img {
+                width: 15px;
+                height: 15px;
+                padding-left: 10px;
+            }
+
+            .header-content {
+                height: 450px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .leftbanner {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightbanner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            #banner1 {
+                width: 400px;
+            }
+
+            .banner2 {
+                width: 390px;
+                height: 90px;
+                background-color: #f8be36;
+                font-size: large;
+            }
+
+            .banner3 {
+                width: 390px;
+                height: 90px;
+                background-color: #f8be36;
+                font-size: large;
+            }
+
+            .menu {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 15px;
+            }
+
+            .choice {
+                display: grid;
+                grid-template-columns: auto;
+                column-gap: 20px;
+                row-gap: 15px;
+            }
+
+            .middlebanner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 600px;
+            }
+
+            .middlebanner div img {
+                height: 250px;
+            }
+
+            .hrleft {
+                width: 80px;
+                height: 5px;
+                background: linear-gradient(to right, #ffffff00, #f8be36);
+                border: none;
+            }
+
+            .hrright {
+                width: 80px;
+                height: 5px;
+                background: linear-gradient(to left, #ffffff00, #f8be36);
+                border: none;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left">
+                    <a href="#" id="logo"><img src="resimler/logo.jpg" alt="" id="maclarenlogo"></a>
+
+                    <ul>
+                        <li class="home"><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <a href="#" id="icon"><img src="resimler/face.png" alt="" id="faceicon"></a>
+                    <a href="#" id="icon"><img src="resimler/insta.png" alt="" id="instaicon"></a>
+                    <a href="#" id="icon"><img src="resimler/twit.png" alt="" id="twiticon"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="leftbanner">
+                    <img src="resimler/banner1.jpg" alt="" id="banner1">
+                </div>
+                <div class="rightbanner">
+                    <div class="banner2">
+                        <p>$ 9,99 <br>Burgers</p>
+                    </div>
+                    <div class="banner3">
+                        <p>$ 4,99 <br>50cc Beer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="menu">
+                <div class="boxmenu">BURGERS</div>
+                <div class="boxmenu">CHIPS</div>
+                <div class="boxmenu">BEERS</div>
+                <div class="boxmenu">WINES</div>
+                <div class="boxmenu">DESSERTS</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="choice">
+                <div class="boxchoice">
+                    <img class="menuicon" src="resimler/burger.png" alt="">
+                    <h6>BURGERS</h6>
+                </div>
+                <div class="boxchoice">
+                    <img class="menuicon" src="resimler/beer.png" alt="">
+                    <h6>BEERS</h6>
+                </div>
+                <div class="boxchoice">
+                    <img class="menuicon" src="resimler/wine.png" alt="">
+                    <h6>WINES</h6>
+                </div>
+                <div class="boxchoice">
+                    <img class="menuicon" src="resimler/music.png" alt="">
+                    <h6>MUSIC</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <article>
+        <div class="container">
+            <div class="middlebanner">
+                <div class="banner4">
+                    <img src="resimler/bannerburger.jpg" alt="">
+                </div>
+                <div class="banner4text">
+                    <h1>Featured Burger</h1>
+                    <h3>Delicious meatballs in soft bread.</h3>
+                    <h3>This flavor is waiting for you.</h3>
+                    <a href="#"><button class="learnmore">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="container">
+        <div class="linebox">
+            <div class="line">
+                <hr class="hrleft">
+                <h2>MacLaren's Pub</h2>
+                <hr class="hrright">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="gallery">
+                <div class="boximg"><img src="resimler/gallery1.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery2.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery3.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery4.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery5.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery6.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery7.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery8.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery9.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery10.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery11.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery12.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery13.jpg" alt=""></div>
+                <div class="boximg"><img src="resimler/gallery14.jpg" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

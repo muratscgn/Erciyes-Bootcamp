@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murat Seçgin - Homework-4</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <ul id="companyname">
+
+    </ul>
+    <button onclick="getCompanyName()">Get Company Name</button>
+</body>
+<script>
+
+    function getCompanyName() {
+
+        document.getElementById("companyname").innerHTML = "";
+
+        axios.get("https://northwind.vercel.app/api/suppliers")
+            .then(res => {
+                let companyname = res.data;
+
+                companyname.map(element => {
+
+                    let liElement = document.createElement("li");
+                    liElement.innerHTML = element.companyName;
+
+                    document.getElementById("companyname").appendChild(liElement)
+
+                });
+            })
+    }
+
+</script>
+</html>

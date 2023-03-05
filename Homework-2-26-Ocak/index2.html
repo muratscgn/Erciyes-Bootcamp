@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murat Seçgin - Homework-2</title>
+    <link rel="stylesheet" href="../Homework-2-26-Şubat/normalize.css">
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .left{
+            display: flex;  
+        }
+        .left ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .left ul li{
+            padding-top: 3px;
+            padding-left: 25px;
+        }
+        a{
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+            color: #f8be36;
+        }
+        #maclarenlogo{
+            width: 200px;
+            height: 35px; 
+        }
+
+        .right{
+            display: flex;
+        }
+        .right a img{
+            width: 35px;
+            height: 35px;
+            padding-left: 10px;
+        }
+
+        header{
+            height: 400px;
+            background-color: #025922;
+            display: flex;
+        }
+        .leftbanner{
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 10%;
+        }
+        #banner1{
+            height: 350px;
+        }
+        .rightbanner{
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 10%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .banner2{
+            width: 300px;
+            height: 150px;
+            background-color: #f8be36;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .banner2 p{
+            text-align: center;
+        }
+        .banner3{
+            width: 300px;
+            height: 150px;
+            background-color: #f8be36;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .banner3 p{
+            text-align: center;
+        }
+
+        .menu{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .boxmenu{
+            background-color: #f8be36;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .choice{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .boxchoice{
+            border-style: solid;
+            border-color: #f8be36;
+            border-radius: 5px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .menuicon{
+            height: 30px;
+        }
+
+        .middlebanner{
+            background-color: white;
+            border-style: solid;
+            border-color: #f8be36;
+            border-radius: 5px;
+            height: 300px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .middlebanner div img{
+            height: 290px;
+        }
+        .banner4{
+            display: flex;
+            flex-direction: row;
+        }
+        .banner4text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .learnmore{
+            border-style: none;
+            font-size: medium;
+            height: 30px;
+            width: 100px;
+            background-color: #f8be36;
+        }
+        .line{
+            display: flex;
+            padding-top: 30px;
+            
+        }
+        .hrleft{
+            width: 420px;
+            height: 7px;
+            background: linear-gradient(to right,#ffffff00,#f8be36);
+            border: none;
+        }
+        .hrright{
+            width: 420px;
+            height: 7px;
+            background: linear-gradient(to left,#ffffff00,#f8be36);
+            border: none;
+        }
+        .line p{
+            
+            font-size: medium;
+            margin-top: 2px;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            column-gap: 20px;
+            row-gap: 20px;
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+        .boximg{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boximg img{
+            height: 100px;
+            width: 130px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="#" id="logo"><img src="resimler/logo.jpg" alt="" id="maclarenlogo"></a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <a href="#" id="icon"><img src="resimler/face.png" alt="" id="faceicon"></a>
+            <a href="#" id="icon"><img src="resimler/insta.png" alt="" id="instaicon"></a>
+            <a href="#" id="icon"><img src="resimler/twit.png" alt="" id="twiticon"></a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="leftbanner">
+            <img src="resimler/banner1.jpg" alt="" id="banner1">
+        </div>
+        <div class="rightbanner">
+            <div class="banner2"><p>$ 9,99 <br>Burgers</p></div>
+            <div class="banner3"><p>$ 4,99 <br>50cc Beer</p></div>
+        </div>
+    </header>
+    <section class="menu">
+        <div class="boxmenu">BURGERS</div>
+        <div class="boxmenu">CHIPS</div>
+        <div class="boxmenu">BEERS</div>
+        <div class="boxmenu">WINES</div>
+        <div class="boxmenu">DESSERTS</div>
+    </section>
+    <section class="choice">
+        <div class="boxchoice">
+            <img class="menuicon" src="resimler/burger.png" alt="">
+            <h6>BURGERS</h6>
+        </div>
+        <div class="boxchoice">
+            <img class="menuicon" src="resimler/beer.png" alt="">
+            <h6>BEERS</h6>
+        </div>
+        <div class="boxchoice">
+            <img class="menuicon" src="resimler/wine.png" alt="">
+            <h6>WINES</h6>
+        </div>
+        <div class="boxchoice">
+            <img class="menuicon" src="resimler/music.png" alt="">
+            <h6>MUSIC</h6>
+        </div>
+    </section>
+    <article class="middlebanner">
+        <div class="banner4">
+            <img src="resimler/bannerburger.jpg" alt="">
+            <div class="banner4text">
+                <h1>Featured Burger</h1>
+                <h3>Delicious meatballs in soft bread.</h3>
+                <h3>This flavor is waiting for you.</h3>
+                <a href="#"><button class="learnmore">Learn More</button></a>
+            </div>
+        </div>
+        <div class="line">
+            <hr class="hrleft">
+            <p><b>MacLaren's Pub</b></p>
+            <hr class="hrright">
+        </div>
+    </article>
+    <footer class="gallery">
+        <div class="boximg"><img src="resimler/gallery1.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery2.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery3.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery4.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery5.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery6.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery7.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery8.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery9.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery10.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery11.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery12.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery13.jpg" alt=""></div>
+        <div class="boximg"><img src="resimler/gallery14.jpg" alt=""></div>
+    </footer>
+
+    
+    
+</body>
+</html>

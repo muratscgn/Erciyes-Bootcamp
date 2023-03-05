@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murat Seçgin - Homework-4</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div>
+        <label for="">Company Name:</label>
+        <input type="text" id="companyname" />
+    </div>
+    <div>
+        <label for="">Contact Name:</label>
+        <input type="text" id="contactname" />
+    </div>
+    <div>
+        <label for="">City:</label>
+        <input type="text" id="city" />
+    </div>
+    <div>
+        <label for="">Country:</label>
+        <input type="text" id="country" />
+    </div>
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+</body>
+<script>
+
+    function add(){
+        let companyName = document.getElementById("companyname").value;
+        let contactName = document.getElementById("contactname").value;
+        let city = document.getElementById("city").value;
+        let country = document.getElementById("country").value;
+
+        let newSuppliers = {
+            companyName: companyName,
+            contactName: contactName,
+            adress: {
+                city: city,
+                country: country
+            }
+        }
+
+        axios.post("https://northwind.vercel.app/api/suppliers", newSuppliers)
+            .then(res => {
+                console.log("Response", res)
+                alert("Success!")
+            })
+    }
+
+</script>
+</html>
